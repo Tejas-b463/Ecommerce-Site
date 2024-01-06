@@ -1,0 +1,21 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 80px;
+}
+
+.product {
+    border: 1px solid black;
+    margin: 20px;
+    width: 400px;
+}
+
+.product-header img {
+    width: 40%;
+    height: 100%;
+    margin-left: 80px;
+}
+
+.product-details .btn {
+    cursor: pointer;
+}

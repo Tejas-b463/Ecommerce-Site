@@ -1,0 +1,41 @@
+/* Navbar.css */
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-heading {
+    font-size: 2rem;
+    margin-right: 20px;
+    color: black;
+    font-weight: 700;
+}
+
+.navbar-right {
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        margin-right: 15px;
+    }
+    a {
+        font-weight: bold;
+        color: black;
+        font-size: 18px;
+    }
+}
