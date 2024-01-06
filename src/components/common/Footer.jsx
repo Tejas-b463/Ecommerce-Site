@@ -19,7 +19,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             style={{ color: "white" }}
-            href="https://www.thesouledstore.com/men"
+            href="https://fakestoreapi.com/"
           >
             &nbsp; Fake Api Store
           </a>

@@ -49,7 +49,7 @@ const ProductList = ({data}) => {
           </div>
           <div className="product-details">
             <h4 className="item-price">{item.title}</h4>
-            <p className="item-price">{item.price}</p>
+            <p className="item-price">${item.price}</p>
             <button className="btn" onClick={() => handleAddItem(item)}>
               Add To Cart
             </button>

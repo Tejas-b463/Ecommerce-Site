@@ -7,20 +7,20 @@ const CheckoutForm = () => {
 
   return (
     <div className="checkout-form">
-      <h1>Checkout</h1>
+      <h1>Checkout ✅</h1>
       <form>
         <label>
-          Name:
+          Name
           <input type="text" name="name"  />
         </label>
 
         <label>
-          Address:
+          Address
           <textarea name="address" />
         </label>
 
         <label>
-          Card Number:
+          Card Number
           <input
             type="text"
             name="cardNumber"
@@ -31,7 +31,7 @@ const CheckoutForm = () => {
         <div className="flex-container">
           <div className="flex-item">
             <label>
-              Expiry Date:
+              Expiry Date
               <input
                 type="text"
                 name="expiryDate"
@@ -42,7 +42,7 @@ const CheckoutForm = () => {
 
           <div className="flex-item">
             <label>
-              CVV:
+              CVV
               <input type="text" name="cvv"  />
             </label>
           </div>

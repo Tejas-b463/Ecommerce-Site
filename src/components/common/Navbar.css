@@ -39,3 +39,9 @@ a {
         font-size: 18px;
     }
 }
+
+@media (max-width:400px) {
+    .hide {
+        display: none;
+    }
+}

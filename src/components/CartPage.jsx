@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { clearCart } from '../utils/cartSlice'
 import CartList from "./CartList"
+import EmptyCart from "./pages/EmptyCart"
 
 const CartPage = () => {
 
@@ -14,10 +15,9 @@ const CartPage = () => {
 
   return (
     <div>
-    <div>CartPage</div>
     {cartItems.length ===0 ?
-    <h1>Cart Is Empty</h1> :
-    <button
+    <EmptyCart/> :
+    <button className='clear-btn'
     onClick={handleClearCart}
     >Clear Cart</button>
 }

@@ -1,4 +1,3 @@
-// Navbar.js
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -20,8 +19,8 @@ const Header = () => {
       </div>
       <div className="navbar-right">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/productlist">Product</Link></li>
+          <li className='hide'><Link to="/">Home</Link></li>
+          {/* <li><Link to="/productlist">Product</Link></li> */}
           <li><Link to="/cartpage"><AiOutlineShoppingCart/><span>{cart.length}</span></Link></li>
         </ul>
       </div>

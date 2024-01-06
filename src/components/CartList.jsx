@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./CardPage.css"; // Import your CSS file
 import { useDispatch } from "react-redux";
-import {removeItem} from "../utils/cartSlice"
+import { removeItem } from "../utils/cartSlice";
 import { Link } from "react-router-dom";
 
 const ProductSummaryPage = ({ data }) => {
@@ -32,29 +32,37 @@ const ProductSummaryPage = ({ data }) => {
 
   return (
     <div className="product-summary-page">
-        {data && data.map((product)=>(
-      <div className="product-cart-main">
-        <div className="product-card">
-          <img
-            src={product.image}
-            alt={product.title}
-          />
-          <h2>{product.title}</h2>
-          <p>Price: ${product.price.toFixed(2)}</p>
-        </div>
-        <div className="quantity-controls">
-          <button onClick={decrementQuantity}>-</button>
-          <span>{quantity}</span>
-          <button onClick={incrementQuantity}>+</button>
-          <button className="remove-btn"
-        onClick={()=> dispatch(removeItem(product.id))}
-        >Remove</button>
-        </div>
-      
-      </div>
-      ))}
-      <div className="total-price">Total Price: ${calculateTotalPrice()}</div>
-      <Link to="/paymentdetail" className="checkout-button">Checkout</Link>
+      {data &&
+        data.map((product) => (
+          <div className="product-cart-main">
+            <div className="product-card">
+              <img src={product.image} alt={product.title} />
+              <h2 className="product-title">{product.title}</h2>
+              <p>Price: ${product.price.toFixed(2)}</p>
+            </div>
+            <div className="quantity-controls">
+              <button onClick={decrementQuantity}>-</button>
+              <span>{quantity}</span>
+              <button onClick={incrementQuantity}>+</button>
+              <button
+                className="remove-btn"
+                onClick={() => dispatch(removeItem(product.id))}
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        ))}
+        
+            <div key={product.id} className="check-out">
+            <div className="total-price">
+              Total Price: ${calculateTotalPrice()}
+            </div>
+            <Link to="/paymentdetail" className="checkout-button">
+              Checkout
+            </Link>
+          </div>
+          
     </div>
   );
 };

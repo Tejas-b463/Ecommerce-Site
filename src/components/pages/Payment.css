@@ -2,13 +2,11 @@
 
 .order-success {
     text-align: center;
-    margin: 50px;
+    margin-bottom: 40px;
 }
 
 .success-image {
     width: 400px;
-    /* Adjust the width as needed */
-    margin-bottom: 20px;
 }
 
 h1 {
@@ -17,21 +15,14 @@ h1 {
 
 p {
     color: #666;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 18px;
 }
 
-.return-home-btn {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.return-home-btn:hover {
-    background-color: #45a049;
+@media (max-width:400px) {
+    .success-image {
+        width: 200px;
+    }
 }
 
 
@@ -39,7 +30,7 @@ p {
 
 .checkout-form {
     max-width: 400px;
-    margin: 50px auto;
+    margin: 60px auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -54,10 +45,21 @@ form {
 label {
     margin-top: 10px;
     text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+label input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
 }
 
 textarea {
-    height: 80px;
+    height: 60px;
+    width: 100%;
+    border: 1px solid #ddd;
 }
 
 .flex-container {
@@ -72,18 +74,23 @@ textarea {
 }
 
 .payment-btn {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px;
-    font-size: 16px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 15px 34px;
+    text-transform: uppercase;
+    transition: all .1s;
+    color: black;
+    border: 2px solid #000;
     margin-top: 20px;
 }
 
 .payment-btn:hover {
-    background-color: #45a049;
+    border: 2px solid #000;
+    background-color: black;
+    color: white;
+    transform: scale(1.001);
 }
 
 @media screen and (max-width: 600px) {
@@ -92,5 +99,8 @@ textarea {
     }
     .flex-item {
         width: 100%;
+    }
+    .payment-btn {
+        padding: 10px;
     }
 }
