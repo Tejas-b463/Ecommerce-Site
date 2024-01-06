@@ -1,66 +1,62 @@
-import React, { useState, useEffect } from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
+import { useState, useEffect } from "react";
 import Shimmer from "./pages/Shimmer";
 import "./ProductList.css";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+// import { useParams } from "react-router-dom";
+// import useProductList from "../utils/useProductList";
 
-const ProductList = () => {
-  const [products, setProducts] = useState([]);
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
-  const [loading, setLoading] = useState(false);
-
+const ProductList = ({data}) => {
+  const[product,setProducts] = useState()
   const fetchData = async () => {
-    if (loading) return;
-
-    setLoading(true);
-
     try {
       const response = await fetch(
-        `https://fakestoreapi.com/products?limit=20&page=${page}`
+        `https://fakestoreapi.com/products?limit=20`
       );
       const data = await response.json();
-
-      if (data.length === 0) {
-        console.log("No more data");
-        setHasMore(false);
-        return;
-      }
-
-      setProducts((prevProducts) => [...prevProducts, ...data]);
-      setPage((prevPage) => prevPage + 1);
+      setProducts(data)
     } catch (error) {
       console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (!data) {
+      // If data prop is not provided, fetch data
+      fetchData();
+    } else {
+      // If data prop is provided, use it directly
+    setProducts(data);
+    }
+  }, [data]);
 
-  return (
-    <InfiniteScroll
-      dataLength={products.length}
-      next={fetchData}
-      hasMore={hasMore}
-      loader={<Shimmer />}
-    >
-      <div className="product-container">
-        {products.map((item) => (
-          <div key={item.id} className="product normal">
-            <div className="product-header">
-              <img src={item.image} alt="product" />
-            </div>
-            <div className="product-details">
-              <h4 className="item-price">{item.title}</h4>
-              <p className="item-price">{item.price}</p>
-              <button className="btn">Add To Cart</button>
-            </div>
+
+  // Write data
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  };
+
+  return !product ? (
+    <Shimmer />
+  ) : (
+    <div className="product-container">
+      {product.map((item) => (
+        <div key={item.id} className="product normal">
+          <div className="product-header">
+            <img src={item.image} alt="product" />
           </div>
-        ))}
-      </div>
-    </InfiniteScroll>
+          <div className="product-details">
+            <h4 className="item-price">{item.title}</h4>
+            <p className="item-price">{item.price}</p>
+            <button className="btn" onClick={() => handleAddItem(item)}>
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
