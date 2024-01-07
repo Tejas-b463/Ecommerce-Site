@@ -23,6 +23,7 @@ p {
 @media (max-width:400px) {
     .order-success {
         margin-top: 120px;
+        min-width: 420px;
     }
     .success-image {
         width: 200px;
@@ -101,6 +102,7 @@ textarea {
 @media screen and (max-width: 600px) {
     .checkout-form {
         margin-top: 120px;
+        min-width: 420px;
     }
     .flex-container {
         flex-direction: column;

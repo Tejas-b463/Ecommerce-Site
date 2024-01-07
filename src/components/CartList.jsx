@@ -2,22 +2,17 @@ import React, { useState } from "react";
 import "./CardPage.css";
 import { useDispatch } from "react-redux";
 import { removeItem } from "../utils/cartSlice";
-import { Link } from "react-router-dom";
 import { RxCross2 } from "react-icons/rx";
 
-const ProductSummaryPage = ({ data }) => {
+const CartList = ({ data }) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
 
-  const product = {
-    id: 1,
-    title: "Product Name",
-    price: 20.99,
-    image: "product_image_url.jpg",
-  };
 
   const incrementQuantity = () => {
-    setQuantity(quantity + 1);
+    if(quantity >= 1){
+      setQuantity(quantity + 1);
+    }
   };
 
   const decrementQuantity = () => {
@@ -26,13 +21,9 @@ const ProductSummaryPage = ({ data }) => {
     }
   };
 
-  const calculateTotalPrice = () => {
-    return (product.price * quantity).toFixed(2);
-  };
-
   return (
     <div className="product-summary-page">
-      {data &&
+      {
         data.map((product) => (
           <div className="product-cart-main">
             <div className="product-card">
@@ -53,20 +44,8 @@ const ProductSummaryPage = ({ data }) => {
             </div>
           </div>
         ))}
-      <div key={product.id} className="check-out">
-        <div className="total-price">Total Price: ${calculateTotalPrice()}</div>
-        <div className="place-order">
-          <Link
-            onClick={() => window.scrollTo(0, 0)}
-            to="/paymentdetail"
-            className="checkout-button"
-          >
-            place order
-          </Link>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default ProductSummaryPage;
+export default CartList;

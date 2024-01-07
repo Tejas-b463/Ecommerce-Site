@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
-import Shimmer from './pages/Shimmer';
-import './ProductList.css';
-import { useDispatch } from 'react-redux';
-import { addItem } from '../utils/cartSlice';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import { useState, useEffect } from "react";
+import Shimmer from "./pages/Shimmer";
+import "./ProductList.css";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+import InfiniteScroll from "react-infinite-scroll-component";
+import toast, { Toaster } from 'react-hot-toast';
 
 const ProductList = ({ data }) => {
   const [products, setProducts] = useState([]);
@@ -25,7 +26,7 @@ const ProductList = ({ data }) => {
         setHasMore(false);
       }
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   };
 
@@ -38,15 +39,29 @@ const ProductList = ({ data }) => {
 
   const handleAddItem = (item) => {
     dispatch(addItem(item));
-  
   };
 
+  const notify = () => toast.success('Item has been added to cart');
+
   return (
+    <>
+      <Toaster
+      toastOptions={{
+        className: '',
+        style: {
+          padding: '10px',
+          color: '#000',
+          fontWeight:600,
+          fontSize:'20px',
+
+        },
+      }}
+      />
     <InfiniteScroll
       dataLength={products.length}
       next={() => setPage(page + 1)}
       hasMore={hasMore}
-      loader={<Shimmer />} 
+      loader={<Shimmer />}
     >
       <div className="product-container">
         {products.map((item) => (
@@ -57,17 +72,26 @@ const ProductList = ({ data }) => {
             <div className="product-details">
               <h4 className="item-price">{item.title}</h4>
               <div className="product-item">
-              <p className="item-price">${item.price}</p>
-              <p className='item-price'>{item.category}</p>
+                <p className="item-price">${item.price}</p>
+                <p className="item-price">{item.category}</p>
               </div>
-              <button className="btn" onClick={() => handleAddItem(item)}>
-                Add To Cart
-              </button>
+              <div>
+                <button
+                  className="btn"
+                  onClick={() => {
+                    handleAddItem(item);
+                    notify();
+                  }}
+                >
+                  Add To Cart
+                </button>
+              </div>
             </div>
           </div>
         ))}
       </div>
     </InfiniteScroll>
+    </>
   );
 };
 
