@@ -1,9 +1,10 @@
-// ProductSummaryPage.js
+
 import React, { useState } from "react";
-import "./CardPage.css"; // Import your CSS file
+import "./CardPage.css"; 
 import { useDispatch } from "react-redux";
 import { removeItem } from "../utils/cartSlice";
 import { Link } from "react-router-dom";
+import { RxCross2 } from "react-icons/rx";
 
 const ProductSummaryPage = ({ data }) => {
   const dispatch = useDispatch();
@@ -48,7 +49,7 @@ const ProductSummaryPage = ({ data }) => {
                 className="remove-btn"
                 onClick={() => dispatch(removeItem(product.id))}
               >
-                Remove
+               <RxCross2/>
               </button>
             </div>
           </div>
@@ -59,7 +60,7 @@ const ProductSummaryPage = ({ data }) => {
               Total Price: ${calculateTotalPrice()}
             </div>
             <Link to="/paymentdetail" className="checkout-button">
-              Checkout
+              place order
             </Link>
           </div>
           

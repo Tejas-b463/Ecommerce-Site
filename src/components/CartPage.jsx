@@ -13,8 +13,12 @@ const CartPage = () => {
           dispatch(clearCart())
   }
 
-  return (
-    <div>
+  return  (
+    <>
+    <div className='cart-summary'>
+      <h2>Product Detail</h2>
+    </div>
+    <div className='empty-cart'>
     {cartItems.length ===0 ?
     <EmptyCart/> :
     <button className='clear-btn'
@@ -25,6 +29,7 @@ const CartPage = () => {
          <CartList data={cartItems}/>
     </div>
     </div>
+    </>
   )
 }
 

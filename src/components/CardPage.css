@@ -1,5 +1,15 @@
 /* ProductSummaryPage.css */
 
+.cart-summary {
+    margin-top: 120px;
+}
+
+.cart-summary h2 {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
 .product-summary-page {
     display: flex;
     flex-wrap: wrap;
@@ -14,14 +24,12 @@
 }
 
 .product-cart-main {
-    /* border: 2px solid black; */
     width: 400px;
 }
 
 .product-card {
     max-width: 400px;
     margin-bottom: 20px;
-    /* border: 2px solid black; */
 }
 
 .product-card img {
@@ -50,10 +58,31 @@
 }
 
 .quantity-controls button {
-    font-size: 18px;
-    margin: 0 5px;
+    background-color: #000;
+    color: #fff;
     cursor: pointer;
-    border: 1px solid #ddd;
+    font-size: 1rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.quantity-controls span {
+    font-size: 1.2rem;
+    outline: 2px solid #000;
+    padding-top: 3px;
+    text-align: center;
+    width: 2rem;
+}
+
+.quantity-controls .remove-btn {
+    font-size: 1.2rem;
+    outline: 2px solid #000;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.8rem;
+    margin-left: 5px;
 }
 
 .total-price {
@@ -62,41 +91,28 @@
 }
 
 .checkout-button {
-    padding: 10px 15px;
+    padding: 10px 25px;
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
-    background-color: #b6002c;
-    border: 2px solid #b6002c!important;
+    background-color: #117a7a;
+    border: 2px solid #117a7a!important;
     color: #fff;
 }
 
 .checkout-button:hover {
     background-color: white;
-    color: black;
-}
-
-.remove-btn {
-    height: 30px;
-    padding: 0 15px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 550;
-    border: 1px solid #ddd;
+    color: #117a7a;
 }
 
 .clear-btn {
+    float: left;
+    background: #fff;
+    color: #58595b;
+    border: 1px solid #58595b;
     padding: 10px 15px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 20px;
-}
-
-.clear-btn:hover {
-    background-color: black;
-    color: white;
 }
 
 @media (max-width:400px) {

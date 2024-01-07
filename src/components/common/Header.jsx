@@ -14,7 +14,7 @@ const Header = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <Link to="/">
-        <span className="navbar-heading">Ecommerce</span>
+        <span className="navbar-heading">Ecommerce 🛍️</span>
         </Link>
       </div>
       <div className="navbar-right">
