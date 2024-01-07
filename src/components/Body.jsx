@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import CartPage from "./CartPage";
 import ProductList from "./ProductList";
@@ -13,10 +9,9 @@ import Header from "./common/Header";
 import Footer from "./common/Footer";
 
 const Body = () => {
-  
   return (
     <Router>
-      <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cartpage" element={<CartPage />} />
@@ -24,7 +19,7 @@ const Body = () => {
         <Route path="/paymentdetail" element={<PaymentDetails />} />
         <Route path="/paymentsucess" element={<PaymentSucess />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 };

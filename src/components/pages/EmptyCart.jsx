@@ -2,7 +2,8 @@ import React from 'react'
 import "./Payment.css"
 import { Link } from 'react-router-dom'
 import EmptyImg from "../../img/empty-cart.png"
-// import successImage from 'https://cdn.dribbble.com/users/1751799/screenshots/5512482/check02.gif'
+
+
 const PaymentSucess = () => {
   return (
     <div className="order-success">

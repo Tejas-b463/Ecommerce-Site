@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import "./CardPage.css"; 
+import "./CardPage.css";
 import { useDispatch } from "react-redux";
 import { removeItem } from "../utils/cartSlice";
 import { Link } from "react-router-dom";
@@ -49,21 +48,26 @@ const ProductSummaryPage = ({ data }) => {
                 className="remove-btn"
                 onClick={() => dispatch(removeItem(product.id))}
               >
-               <RxCross2/>
+                <RxCross2 />
               </button>
             </div>
           </div>
-        ))}
-        
-            <div key={product.id} className="check-out">
-            <div className="total-price">
-              Total Price: ${calculateTotalPrice()}
-            </div>
-            <Link to="/paymentdetail" className="checkout-button">
-              place order
-            </Link>
-          </div>
+
           
+        ))}
+        <div key={product.id} className="check-out">
+        <div className="total-price">Total Price: ${calculateTotalPrice()}</div>
+        <Link
+          onClick={() => window.scrollTo(0, 0)}
+          to="/paymentdetail"
+          className="checkout-button"
+        >
+          place order
+        </Link>
+      </div>
+       
+
+      
     </div>
   );
 };

@@ -13,10 +13,6 @@ const Shimmer = () => {
             <div className="shimmer-description"></div>
           </div>
         ))}
-
-
-
-        
     </div>
   );
 };

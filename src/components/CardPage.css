@@ -1,5 +1,3 @@
-/* ProductSummaryPage.css */
-
 .cart-summary {
     margin-top: 120px;
 }
@@ -119,9 +117,15 @@
     .product-summary-page {
         margin-left: 60px;
     }
+    .product-cart-main {
+        margin-top: 40px;
+    }
     .product-card img {
         min-width: 60%;
         height: 200px;
         margin-bottom: 12px;
+    }
+    .check-out {
+        margin-right: 50px;
     }
 }

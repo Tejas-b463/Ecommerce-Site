@@ -1,0 +1,1 @@
+export const PAYMENT_SUCCESS_IMG = 'https://cdn.dribbble.com/users/1751799/screenshots/5512482/check02.gif'
