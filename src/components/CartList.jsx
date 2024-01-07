@@ -52,22 +52,19 @@ const ProductSummaryPage = ({ data }) => {
               </button>
             </div>
           </div>
-
-          
         ))}
-        <div key={product.id} className="check-out">
+      <div key={product.id} className="check-out">
         <div className="total-price">Total Price: ${calculateTotalPrice()}</div>
-        <Link
-          onClick={() => window.scrollTo(0, 0)}
-          to="/paymentdetail"
-          className="checkout-button"
-        >
-          place order
-        </Link>
+        <div className="place-order">
+          <Link
+            onClick={() => window.scrollTo(0, 0)}
+            to="/paymentdetail"
+            className="checkout-button"
+          >
+            place order
+          </Link>
+        </div>
       </div>
-       
-
-      
     </div>
   );
 };

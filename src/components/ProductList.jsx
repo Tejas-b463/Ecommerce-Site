@@ -38,6 +38,7 @@ const ProductList = ({ data }) => {
 
   const handleAddItem = (item) => {
     dispatch(addItem(item));
+  
   };
 
   return (

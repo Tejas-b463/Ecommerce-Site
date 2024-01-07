@@ -46,3 +46,10 @@ footer {
         gap: 1rem;
     }
 }
+
+@media(max-width: 400px) {
+    footer {
+        height: 500px;
+        width: 400px;
+    }
+}

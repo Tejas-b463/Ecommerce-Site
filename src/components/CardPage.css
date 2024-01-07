@@ -1,11 +1,11 @@
 .cart-summary {
     margin-top: 120px;
+    text-align: center;
+    line-height: 1.5;
 }
 
 .cart-summary h2 {
-    text-align: center;
     font-size: 28px;
-    line-height: 1.5;
 }
 
 .product-summary-page {
@@ -28,11 +28,16 @@
 .product-card {
     max-width: 400px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-card img {
     max-width: 100%;
     height: 200px;
+    width: 200px;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -53,6 +58,8 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .quantity-controls button {
@@ -89,14 +96,17 @@
 }
 
 .checkout-button {
-    padding: 10px 25px;
-    font-size: 20px;
-    font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
     background-color: #117a7a;
     border: 2px solid #117a7a!important;
     color: #fff;
+    padding: 10px 10px;
+}
+
+.place-order {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .checkout-button:hover {
@@ -113,6 +123,12 @@
     cursor: pointer;
 }
 
+.check-out {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}
+
 @media (max-width:400px) {
     .product-summary-page {
         margin-left: 60px;
@@ -121,11 +137,13 @@
         margin-top: 40px;
     }
     .product-card img {
-        min-width: 60%;
+        min-width: 40%;
         height: 200px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
-    .check-out {
-        margin-right: 50px;
+    .checkout-button {
+        font-size: 16px;
+        padding: 10px 80px;
+        display: block;
     }
 }
