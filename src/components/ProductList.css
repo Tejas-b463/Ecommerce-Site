@@ -68,9 +68,9 @@
     width: 100%;
 }
 
-@media (max-width:400px) {
+@media (max-width:480px) {
     .product-container {
-        margin-left: 120px;
+        margin-left: 40px;
     }
     .product {
         padding: 20px 60px;

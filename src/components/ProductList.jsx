@@ -18,10 +18,8 @@ const ProductList = ({ data }) => {
       );
       const newData = await response.json();
 
-      // Update state with new data
       setProducts((prevData) => [...prevData, ...newData]);
 
-      // If the fetched data is less than the limit, set hasMore to false
       if (newData.length < 20) {
         setHasMore(false);
       }

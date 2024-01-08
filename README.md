@@ -6,8 +6,8 @@
 
 - **Product Listings :** 🍽️ Display a list of Product with details and Product items.
 - **Menu Navigation :** 📜 Users can browse Product menus and add items to their cart.
-- **Infinite Scrolling :** :🔄 Implement infinite scrolling to load more restaurant listings as users scroll down the page.
-- **Footer Section :** 🦶 Include a footer section with links to important pages, contact information, and social media.
+- **Infinite Scrolling :** 🔄 Implement infinite scrolling to load more restaurant listings as users scroll down the page.
+- **Lazy Loading :** ⚡ Experience faster page loading with lazy loading for your order summary.
 - **Removing Items from Cart :** 🗑️ Users can remove individual items from their shopping cart without clearing the entire cart.
 - **Clear Cart Functionality :** 🛒 Provide an option for users to clear their entire shopping cart with a single action.
 - **Order Summary :** 📦 Display a summary of the order, including items, quantities, and total cost.

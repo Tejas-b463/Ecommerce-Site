@@ -150,7 +150,10 @@
     .empty-cart {
         float: left;
     }
-    /* .clear-btn {
-        float: left;
-    } */
+    .clear-btn {
+        margin-top: 30px;
+    }
+    .product-summary-page {
+        margin-top: 1px;
+    }
 }
