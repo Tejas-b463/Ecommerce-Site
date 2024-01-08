@@ -7,6 +7,7 @@ footer {
     text-align: center;
     height: 14rem;
     background-color: #252422;
+    width: 100%;
 }
 
 .footer-links {
@@ -40,6 +41,7 @@ footer {
 @media only screen and (max-width: 768px) {
     footer {
         height: auto;
+        width: 435px;
     }
     .footer-links {
         flex-direction: column;
@@ -50,6 +52,5 @@ footer {
 @media(max-width: 400px) {
     footer {
         height: 500px;
-        width: 400px;
     }
 }
