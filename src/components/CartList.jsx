@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CardPage.css";
 import { useDispatch } from "react-redux";
 import { removeItem } from "../utils/cartSlice";
-import { RxCross2 } from "react-icons/rx";
+import { CgClose } from "react-icons/cg";
 
 const CartList = ({ data }) => {
   const dispatch = useDispatch();
@@ -39,7 +39,7 @@ const CartList = ({ data }) => {
                 className="remove-btn"
                 onClick={() => dispatch(removeItem(product.id))}
               >
-                <RxCross2 />
+                <CgClose />
               </button>
             </div>
           </div>

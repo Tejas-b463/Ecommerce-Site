@@ -23,20 +23,17 @@ const CartPage = () => {
 
   return (
     <>
+      
+      <div className="empty-cart">
       <div className="cart-summary">
         <h2>Product Details</h2>
         <p>Total Items - {cartItems.length}</p>
       </div>
-      <div className="empty-cart">
         {cartItems.length === 0 ? (
           <EmptyCart />
         ) : (
           <div className="check-out">
-            <div className="clear-cart">
-            <button className="clear-btn" onClick={handleClearCart}>
-              Clear Cart
-            </button>
-            </div>
+           
             <div className="place-order">
               <div className="total-price">
                 Total Price: ${calculateTotalPrice(quantity, cartItems.price)}
@@ -48,6 +45,11 @@ const CartPage = () => {
               >
                 place order
               </Link>
+            </div>
+            <div className="clear-cart">
+            <button className="clear-btn" onClick={handleClearCart}>
+              Clear Cart
+            </button>
             </div>
           </div>
         )}

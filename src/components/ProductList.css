@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 120px;
-    border: 1px solid black;
 }
 
 .product {
@@ -70,6 +69,9 @@
 }
 
 @media (max-width:400px) {
+    .product-container {
+        margin-left: 120px;
+    }
     .product {
         padding: 20px 60px;
         height: auto;

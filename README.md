@@ -12,6 +12,8 @@
 - **Clear Cart Functionality :** 🛒 Provide an option for users to clear their entire shopping cart with a single action.
 - **Order Summary :** 📦 Display a summary of the order, including items, quantities, and total cost.
 - **Submit Payment :** 🚀 Include a button for users to confirm and submit their payment.
+- **Responsive Website :** 📱website is responsive and looks good on various screen sizes.
+- **Toast :** 📦 Successfully added items to your cart! 
 
 ## Getting Started
 

@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 40px;
+    overflow: unset;
 }
 
 .shimmer-card {
@@ -56,5 +57,11 @@
     }
     100% {
         background-position: 200% 0;
+    }
+}
+
+@media (min-width: 400px) {
+    .shimmer-container {
+        margin-left: 140px;
     }
 }

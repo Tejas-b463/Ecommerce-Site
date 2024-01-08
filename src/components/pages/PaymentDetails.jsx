@@ -1,8 +1,11 @@
 import "./Payment.css";
 import { Link } from "react-router-dom";
 
+
 const CheckoutForm = () => {
+
   return (
+    <>
     <div className="checkout-form">
       <h1>Checkout ✅</h1>
       <form>
@@ -38,7 +41,7 @@ const CheckoutForm = () => {
         </div>
 
         <Link
-          onClick={() => window.scrollTo(0, 0)}
+          onClick={() =>  window.scrollTo(0, 0)}
           to="/paymentsucess"
           type="button"
           className="payment-btn"
@@ -47,6 +50,7 @@ const CheckoutForm = () => {
         </Link>
       </form>
     </div>
+    </>
   );
 };
 

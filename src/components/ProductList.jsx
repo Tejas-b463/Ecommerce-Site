@@ -62,6 +62,7 @@ const ProductList = ({ data }) => {
       next={() => setPage(page + 1)}
       hasMore={hasMore}
       loader={<Shimmer />}
+      style={{overflow:"unset"}}
     >
       <div className="product-container">
         {products.map((item) => (
