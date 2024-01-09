@@ -2,7 +2,7 @@ import "./Payment.css";
 import { Link } from "react-router-dom";
 
 
-const CheckoutForm = () => {
+const PaymentDetails = () => {
 
   return (
     <>
@@ -54,4 +54,4 @@ const CheckoutForm = () => {
   );
 };
 
-export default CheckoutForm;
+export default PaymentDetails;

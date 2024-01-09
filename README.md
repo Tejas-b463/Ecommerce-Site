@@ -6,6 +6,8 @@
 
 - **Product Listings :** 🍽️ Display a list of Product with details and Product items.
 - **Menu Navigation :** 📜 Users can browse Product menus and add items to their cart.
+- **Fetch API :** ✅ 
+Fetch fake API for dynamic website updates, enhancing user experience.
 - **Infinite Scrolling :** 🔄 Implement infinite scrolling to load more restaurant listings as users scroll down the page.
 - **Lazy Loading :** ⚡ Experience faster page loading with lazy loading for your order summary.
 - **Removing Items from Cart :** 🗑️ Users can remove individual items from their shopping cart without clearing the entire cart.

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import EmptyImg from "../../img/empty-cart.png"
 
 
-const PaymentSucess = () => {
+const EmptyCart = () => {
   return (
     <div className="order-success">
     <img style={{width:"200px"}} src={EmptyImg} alt="Order Success" className="success-image" />
@@ -15,4 +15,4 @@ const PaymentSucess = () => {
   )
 }
 
-export default PaymentSucess
+export default EmptyCart

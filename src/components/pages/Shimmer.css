@@ -59,9 +59,3 @@
         background-position: 200% 0;
     }
 }
-
-@media (min-width: 400px) {
-    .shimmer-container {
-        margin-left: 140px;
-    }
-}
