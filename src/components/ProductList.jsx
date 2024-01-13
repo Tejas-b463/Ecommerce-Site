@@ -6,7 +6,7 @@ import { addItem } from "../utils/cartSlice";
 import InfiniteScroll from "react-infinite-scroll-component";
 import toast, { Toaster } from 'react-hot-toast';
 
-const ProductList = ({ data }) => {
+const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);

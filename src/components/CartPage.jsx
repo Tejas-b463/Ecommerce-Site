@@ -14,7 +14,7 @@ const CartPage = () => {
 
   const handleClearCart = () => {
     dispatch(clearCart());
-    setQuantities({}); // Clear quantities as well
+    setQuantities({}); 
   };
 
   const calculateTotalPrice = () => {
