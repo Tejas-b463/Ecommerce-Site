@@ -7,6 +7,7 @@ import PaymentDetails from "./pages/PaymentDetails";
 import PaymentSucess from "./pages/PaymentSucess";
 import Header from "./common/Header";
 import Footer from "./common/Footer";
+import ClassComponents from "../classComponents";
 
 const Body = () => {
   return (
@@ -18,6 +19,7 @@ const Body = () => {
         <Route path="/productlist" element={<ProductList />} />
         <Route path="/paymentdetail" element={<PaymentDetails />} />
         <Route path="/paymentsucess" element={<PaymentSucess/>} />
+        <Route path="/classComponents" element={<ClassComponents name={"Tejas"} location={"Amravati"} contact={"tejas@456"}/>}/>
       </Routes>
       <Footer />
     </Router>

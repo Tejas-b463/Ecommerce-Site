@@ -41,6 +41,7 @@ const ProductList = () => {
 
   const notify = () => toast.success('Item has been added to cart');
 
+
   return (
     <>
       <Toaster

@@ -15,6 +15,7 @@ const ProductItem = ({ item }) => {
   const notify = () => toast.success('Item has been added to cart');
 
   return (
+    <>
     <div key={item.id} className="product normal">
       <div className="product-header">
         <img src={item.image} alt="product" />
@@ -32,6 +33,7 @@ const ProductItem = ({ item }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

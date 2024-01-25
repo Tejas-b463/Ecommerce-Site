@@ -20,7 +20,7 @@ const Header = () => {
       <div className="navbar-right">
         <ul>
           <li className='hide'><Link to="/">Home</Link></li>
-          {/* <li><Link to="/productlist">Product</Link></li> */}
+          <li><Link to="/classComponents">About</Link></li>
           <li><Link onClick={()=>window.scrollTo(0,0)} to="/cartpage"><AiOutlineShoppingCart/><span>{cart.length}</span></Link></li>
         </ul>
       </div>
