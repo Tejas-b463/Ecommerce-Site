@@ -3,6 +3,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 import toast from 'react-hot-toast';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import {PlaceholderImage} from "../img/loadingimg.jpg"
 
 const ProductItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -18,7 +20,14 @@ const ProductItem = ({ item }) => {
     <>
     <div key={item.id} className="product normal">
       <div className="product-header">
-        <img src={item.image} alt="product" />
+        {/* <img src={item.image} alt="product" /> */}
+        <LazyLoadImage
+  src={Image}
+  width={800}
+  height={500}
+  placeholderSrc={PlaceholderImage}
+  alt="product"
+/>
       </div>
       <div className="product-details">
         <h4 className="item-price">{item.title}</h4>
